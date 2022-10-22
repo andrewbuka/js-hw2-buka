@@ -7,10 +7,10 @@
 // This function should check if a and b numbers. If not - return error message
 const checkNumbers = (a, b, callback) => {  
   callback(a, b);
-  return isNumbers();
+  return areNumbers();
 };
 
-function isNumbers(a, b) {
+function areNumbers(a, b) {
   if (!isNaN(a) && !isNaN(b)) {
     return 1;
   }
@@ -92,7 +92,7 @@ const formatLogger = (messageType) => {
   // It should check if two numbers are real numbers and return result of the second callback. In case it's not a numbers - it should return error message with firstCallback
 const calculateResult = (num1, num2, callback1, callback2) => {
     
-  callback1(num1, num2, isNumbers);
+  callback1(num1, num2, areNumbers);
   callback2(num1, num2);
 
   if (!isNaN(num1) && !isNaN(num2)) {
@@ -100,7 +100,7 @@ const calculateResult = (num1, num2, callback1, callback2) => {
   }
 
   else {
-    return  callback1(num1, num2, isNumbers);
+    return  callback1(num1, num2, areNumbers);
   }
 }
 
