@@ -11,7 +11,7 @@ const checkNumbers = (a, b, callback) => {
 };
 
 function areNumbers(a, b) {
-  if (!isNaN(a) && !isNaN(b)) {
+  if (typeof(a) === 'number' && typeof(b) === 'number') {
     return 1;
   }
   
@@ -95,7 +95,7 @@ const calculateResult = (num1, num2, callback1, callback2) => {
   callback1(num1, num2, areNumbers);
   callback2(num1, num2);
 
-  if (!isNaN(num1) && !isNaN(num2)) {
+  if (typeof(num1) === 'number' && typeof(num2) === 'number') {
     return  callback2(num1, num2);
   }
 
